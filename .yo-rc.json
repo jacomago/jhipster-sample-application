@@ -35,7 +35,13 @@
     "dtoSuffix": "DTO",
     "otherModules": [],
     "blueprints": [],
-    "prettierJava": true
+    "prettierJava": true,
+    "herokuAppName": "jacomago-jhipster-sample",
+    "herokuDeployType": "git",
+    "herokuJavaVersion": "14",
+    "useOkta": false,
+    "oktaAdminLogin": "jaco.brewer@gmail.com",
+    "oktaAdminPassword": "FreddyMercury18"
   },
   "git-provider": "GitHub",
   "git-company": "jacomago",

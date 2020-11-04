@@ -43,7 +43,9 @@ script:
   - ./gradlew checkstyleNohttp
   - ./gradlew clean test integrationTest
   - ./gradlew npm_run_test -PnodeInstall --no-daemon
+  - if [ $TRAVIS_PULL_REQUEST == "false" ]; then ./gradlew sonarqube --no-daemon -Dsonar.host.url=https://sonarcloud.io -Dsonar.login=$SONAR_TOKEN; fi
   - ./gradlew bootJar -Pprod -x test
+  - ./gradlew deployHeroku
 notifications:
   webhooks:
     on_success: change  # options: [always|never|change] default: always
